@@ -14,6 +14,8 @@ h1,h2,h3,p {
 
 img {
   display: block;
+  max-width: 100%;
+  height: auto;
 }
 
 :root {
@@ -35,27 +37,40 @@ body {
 a {
   color: inherit;
 }
-/* .section {
-  padding-top: ;
-  padding-left: 215px;
-  padding-right: 215px;
-} */
 
 .container{
   width: 1200px;
-  padding-left: 15px;
-  padding-right: 15px;
+  padding: 94px 15px;
   margin-left: auto;
   margin-right: auto;
 
-  outline: 2px solid red;
-  outline-offset: -2px;
+
 }
 
 /*----------------------HEADER-----------------------*/
 
 .site-header {
   background: var(--addColor);
+}
+
+.site-header .container {
+  display: flex;
+  padding-top: 32px;
+  padding-bottom: 32px;
+  align-items: center;
+  justify-content: space-between;
+
+}
+
+.header-nav {
+  display: flex;
+  align-items: center;
+}
+
+.header-nav-links {
+  display: flex;
+  gap: 50px;
+
 }
 
 .logo {
@@ -65,6 +80,8 @@ a {
   font-size: 26px;
   letter-spacing: 0.03em;
   color: #000000;
+  display: inline-block;
+  margin-right: 93px;
 
 }
 
@@ -76,6 +93,9 @@ a {
   font-weight: 500;
   line-height: calc(16/14);
   letter-spacing: 0.02em;
+  display: block;
+  padding-bottom: 32px;
+  padding-top: 32px;
 }
 
 .nav-links:hover,
@@ -87,13 +107,14 @@ a {
   color: var(--activeSelection);
 }
 
-
-
 .contacts-link {
   font-weight: 500;
   line-height: 1.14;
   letter-spacing: 0.02em;
   color: var(--colorOfParagraphs);
+  display: block;
+  padding-top: 32px;
+  padding-bottom: 32px;
 }
 
 .contacts-link:hover,
@@ -101,11 +122,22 @@ a {
 color: var(--activeSelection);
 }
 
+.header-contacts-link {
+  display: flex;
+  gap: 50px;
+}
 
 /*----------------------HERO--------------------------*/
 
 .hero {
   background: var(--backgroundFooter);
+
+}
+
+.hero .container {
+  padding-top: 200px;
+  padding-bottom: 200px;
+  text-align: center;
 }
 
 .hero-title {
@@ -116,6 +148,10 @@ color: var(--activeSelection);
   color:var(--addColor);
   line-height: calc(60/44);
   width: 696px;
+  margin-bottom: 30px;
+  margin-left: auto;
+  margin-right: auto;
+
 
 }
 
@@ -150,14 +186,18 @@ color: var(--activeSelection);
 /*----------------------FEATURES-------------------*/
 
 .features {
-  width: 270px;
+  display: flex;
+  gap: 30px;
 }
 
 .features-title {
   font-size: 14px;
   letter-spacing: 0.03em; 
   text-transform: uppercase;
-  line-height: calc(16/14)
+  line-height: calc(16/14);
+  margin-bottom: 10px;
+
+
 }
 
 .features-text {
@@ -165,17 +205,25 @@ color: var(--activeSelection);
   font-weight: 400;
   line-height: calc(24/14);
   letter-spacing: 0.03em;
+  width: 270px;
 }
 
 /*------------------OUR SERVICES---------------------*/
 
 .section-title {
-font-size: 36px;
-line-height: calc(42/36);
-text-align: center;
-letter-spacing: 0.03em;
-margin-bottom: 50px;
+  font-size: 36px;
+  line-height: calc(42/36);
+  text-align: center;
+  letter-spacing: 0.03em;
+  margin-bottom: 50px;
 }
+
+.services {
+  display: flex;
+  gap: 30px;
+}
+
+
 
 /*-----------------OUR TEAM------------------------*/
 
@@ -183,10 +231,15 @@ margin-bottom: 50px;
 background-color: #F5F4FA;
 }
 
+.our-team-card {
+  display: flex;
+}
+
 .our-team-list {
   background-color: var(--addColor);
   box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14), 0px 2px 1px rgba(0, 0, 0, 0.2);
   border-radius: 0px 0px 4px 4px;
+  margin-right: 30px;
 }
 
 .our-team-title {
@@ -195,7 +248,12 @@ background-color: #F5F4FA;
   line-height: calc(19/16);
   letter-spacing: 0.03em;
   text-align: center;
-}
+
+  }
+
+.our-team-list:last-child{
+  margin-right: 0;
+}  
 
 .our-team-text {
   color: var(--colorOfParagraphs);
@@ -239,8 +297,18 @@ color: var(--activeSelection);
   font-size: 26px;
   letter-spacing: 0.03em;
   color: var(--addColor);
+  display: inline-block;
+  margin-bottom: 20px;
 }
 
+.footer-adress-links {
+  margin-bottom:  9px;
+}
+
+.footer .container {
+padding-top: 60px;
+padding-bottom: 60px;
+}
 
 /*---------------PORTFOLIO---------------------*/
 /*---------------FILTRES------------------------*/
@@ -261,7 +329,6 @@ color: var(--activeSelection);
 .filter{
   display:flex;
   margin-bottom: 34px;
-  padding-top: 94px;
   padding-bottom: 16px;
   justify-content: center;
 
@@ -304,7 +371,6 @@ color: var(--activeSelection);
   flex-wrap: wrap;
   align-content: center;
   gap: 30px;
-  padding-bottom: 94px;
 
 }
 .project-title {
