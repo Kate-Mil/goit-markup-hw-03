@@ -388,11 +388,9 @@ padding-bottom: 60px;
 
 .project-container {
   padding: 20px 24px;
-
-}
-
-.project-container-border {
   background: #FFFFFF;
   border: 1px solid #EEEEEE;
   width: 370px;
+
 }
+
